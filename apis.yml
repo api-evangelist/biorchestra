@@ -1,23 +1,62 @@
 aid: biorchestra
+
 name: Biorchestra
-description: 'Biorchestra is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'BIORCHESTRA develops transformational RNA medicines and delivery systems aimed at addressing major unmet medical needs in neurodegenerative and rare diseases of the Central Nervous System. The company focuses on novel target discovery, first‑in‑class drug development, and nanomedicine platforms to create innovative therapies for patients and their families.'
+
 url: https://raw.githubusercontent.com/api-evangelist/biorchestra/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
-- Company
-apis: []
+- RNA therapeutics
+- Central Nervous System diseases
+- Biotech
+- Drug development
+- Nanomedicine
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Security
+  url: security/biorchestra-vulnerability-disclosure.yml
+- type: Hosts
+  url: hosts/biorchestra-hosts.yml
+- type: VulnerabilityDisclosure
+  url: security/biorchestra-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/biorchestra-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/biorchestra
+  url: https://biorchestra.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: The main website returns a JavaScript shell with no machine‑readable API specification.
+  evidence:
+    - url: https://biorchestra.com
+      status: 200
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
